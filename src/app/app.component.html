@@ -1,0 +1,60 @@
+<!-- <div class="track">
+  <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order confirmed</span> </div>
+  <div class="step active"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Picked by courier</span> </div>
+  <div class="step"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
+  <div class="step"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text">Ready for pickup</span> </div>
+</div> -->
+<div class="container padding-bottom-3x mb-1">
+  <div class="card mb-3">
+    <div class="card-body">
+      <div class="steps d-flex flex-wrap flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
+        <i class="fa fa-ellipsis-v" aria-hidden="true" style="float: right;padding: 13px 10px;"></i>
+        <h4 class="step-title" style="margin: 10px 1px 16px 1px;">Days to hardblock note: 55</h4>
+        <div *ngFor="let loop of DeliveryStatus;let idx=index;" class="step completed" [ngClass]="{ 'completed': loop.date==setDate }">
+          <div class="step-icon-wrap">
+            <p *ngIf="idx!=0" style="margin: 0;position: absolute;font-weight: bold;color: #797979;">{{ loop.dayDiff}}</p>
+            <div class="step-icon">
+              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <h4 class="step-title">{{ loop.name }}
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </h4>
+          <p class="step-title">{{ loop.date }}</p>
+        </div>
+        <!-- <div class="step completed">
+          <div class="step-icon-wrap">
+            <div class="step-icon">
+              <i class="pe-7s-config"></i>
+            </div>
+          </div>
+          <h4 class="step-title">Processing Order</h4>
+        </div>
+        <div class="step completed">
+          <div class="step-icon-wrap">
+            <div class="step-icon">
+              <i class="pe-7s-medal"></i>
+            </div>
+          </div>
+          <h4 class="step-title">Quality Check</h4>
+        </div>
+        <div class="step">
+          <div class="step-icon-wrap">
+            <div class="step-icon">
+              <i class="pe-7s-car"></i>
+            </div>
+          </div>
+          <h4 class="step-title">Product Dispatched</h4>
+        </div>
+        <div class="step">
+          <div class="step-icon-wrap">
+            <div class="step-icon">
+              <i class="pe-7s-home"></i>
+            </div>
+          </div>
+          <h4 class="step-title">Product Delivered</h4>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
